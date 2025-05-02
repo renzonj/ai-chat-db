@@ -1,24 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Chat Database Application
 
-## Getting Started
+This is a [Next.js](https://nextjs.org) application that provides an interface for visualizing and querying Philippine earthquake data.
 
-First, run the development server:
+## Prerequisites
+
+- Node.js (v18 or newer)
+- pnpm package manager
+- Git
+
+## Installation
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd ai-chat-db
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Set up environment variables:
+
+```bash
+cp .env.example .env.local
+```
+
+Then edit `.env.local` with your configuration details.
+
+## Dataset Setup
+
+1. Download the earthquake dataset from Kaggle:
+   - Visit [Philippine Earthquakes from PHIVOLCS](https://www.kaggle.com/datasets/bwandowando/philippine-earthquakes-from-phivolcs)
+   - You may need to create a Kaggle account if you don't have one
+   - Download the dataset as CSV
+
+2. Save the dataset:
+   - Save the downloaded CSV file as `phivolcs_earthquake_data.csv`
+   - Place it in the `/data` directory of the project:
+
+```bash
+mkdir -p data
+mv /path/to/downloaded/file.csv ./data/phivolcs_earthquake_data.csv
+```
+
+## Database Seeding
+
+Seed the database with earthquake data:
+
+```bash
+pnpm run seed
+```
+
+## Running the Application
+
+Start the development server:
+
+```bash
+pnpm dev
+```
+
+Access the application in your browser:
+   - Open [http://localhost:3000](http://localhost:3000)
+
+
+## For production builds:
+
+```bash
+pnpm build
+pnpm start
+```
 
 ## Learn More
 
@@ -27,10 +81,8 @@ To learn more about Next.js, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
+## Deployment
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
