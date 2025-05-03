@@ -1,5 +1,8 @@
 # AI Chat Database Application
 
+<img width="379" alt="image" src="https://github.com/user-attachments/assets/4a811c69-e5f3-49c3-b7fa-900212cc7ffd" />
+
+
 This is a [Next.js](https://nextjs.org) application that provides an interface for visualizing and querying Philippine earthquake data.
 
 ## Prerequisites
