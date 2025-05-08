@@ -1,4 +1,3 @@
-import { InferInsertModel, InferSelectModel } from 'drizzle-orm';
 import { pgTable, serial, timestamp, decimal, text } from 'drizzle-orm/pg-core';
 /**
  * Earthquake schema for storing seismic event data from the Philippines
@@ -14,5 +13,5 @@ export const philvolcsEarthquakes = pgTable('philvolcs_earthquakes', {
   createdAt: timestamp('created_at').defaultNow().notNull(),
 });
 
-export type PhilvolcsEarthquake = InferSelectModel<typeof philvolcsEarthquakes>
-export type PhilvolcsEarthquakeInsert = InferInsertModel<typeof philvolcsEarthquakes>
+export type PhilvolcsEarthquake = typeof philvolcsEarthquakes.$inferSelect;
+export type PhilvolcsEarthquakeInsert = typeof philvolcsEarthquakes.$inferInsert;
