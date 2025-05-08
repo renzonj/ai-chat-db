@@ -198,13 +198,13 @@ export function Chat() {
           handleInputChange={handleInputChange}
           handleSubmit={handleSubmit}
           isLoading={isLoading}
-          // suggestions={[
-          //   'What are the top 5 earthquakes by magnitude?',
-          //   'What is the most common time of day for earthquakes?',
-          //   'What is the average magnitude of earthquakes per month?',
-          //   'What is the latest earthquake data?',
-          //   'What is the most common depth of earthquakes?',
-          // ]}
+          suggestions={[
+            'What are the top 5 earthquakes by magnitude?',
+            'What is the most common time of day for earthquakes?',
+            'What is the average magnitude of earthquakes per month?',
+            'What is the latest earthquake data?',
+            'What is the most common depth of earthquakes?',
+          ]}
         />
       </div>
     </div>
